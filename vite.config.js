@@ -1,4 +1,4 @@
+import { defineConfig } from "vite";
+
 // vite.config.js
-export default {
-  return: { base: "/card/" },
-};
+export default defineConfig({ base: "/card/" });
