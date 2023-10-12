@@ -269,4 +269,7 @@ button:hover,
   #av {
     border: 0.3rem solid rgb(36, 124, 25)
   }
+  #info {
+    grid-template-columns: 20% 80%;
+  }
 }
