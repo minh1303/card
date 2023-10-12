@@ -24,23 +24,25 @@ buttonyes.classList.add("hidden");
 buttonno.classList.add("hidden");
 
 main.addEventListener("animationend", (e) => {
-  if(e.animationName !== "spawn") return;
+  if (e.animationName !== "spawn") return;
   e.currentTarget.classList.remove("main-animated");
   for (let i = 0; i < e.currentTarget.children.length; i++) {
     e.currentTarget.children[i].classList.remove("hidden");
   }
-  avatar.classList.remove("hidden");
   for (const text of texts) {
     text.classList.remove("hidden");
     text.classList.add("glitch");
     text.setAttribute("data-glitch", text.innerText);
-    text.addEventListener("animationend", e => {
-      if(e.animationName !== "glitch-color") return
-      e.currentTarget.classList.remove("glitch")
-    })
+    text.addEventListener("animationend", (e) => {
+      if (e.animationName !== "glitch-color") return;
+      setTimeout(() => {
+        avatar.classList.remove("hidden");
+        buttonyes.classList.remove("hidden");
+        buttonno.classList.remove("hidden");
+      }, 300);
+      e.currentTarget.classList.remove("glitch");
+    });
   }
-  buttonyes.classList.remove("hidden");
-  buttonno.classList.remove("hidden");
 });
 
 buttonno.addEventListener("click", async () => {
