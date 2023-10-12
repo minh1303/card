@@ -6,6 +6,7 @@ const texts = document.querySelectorAll("p");
 const avatar = document.querySelector("#av");
 const main = document.querySelector("main");
 const counter = document.querySelector("#counter");
+const bg = document.querySelector("#bg")
 const dbRef = ref(db);
 let counterValue;
 onValue(dbRef, (snapshot) => {
@@ -22,7 +23,9 @@ for (const text of texts) {
 
 buttonyes.classList.add("hidden");
 buttonno.classList.add("hidden");
-
+bg.addEventListener("animationend", () => {
+  main.classList.remove("hidden");
+})
 main.addEventListener("animationend", (e) => {
   if (e.animationName !== "spawn") return;
   e.currentTarget.classList.remove("main-animated");
