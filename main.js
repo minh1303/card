@@ -47,7 +47,6 @@ for (let i = 0; i < main.children.length; i++) {
 }
 
 for (const text of mainTexts) {
-  console.log(text);
   text.classList.add("hidden");
 }
 
