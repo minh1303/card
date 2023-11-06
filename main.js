@@ -6,7 +6,6 @@ const mainTexts = document.querySelectorAll("main p");
 const avatar = document.querySelector("#av");
 const main = document.querySelector("main");
 const counter = document.querySelector("#counter");
-const bg = document.querySelector("#bg");
 const menubasic = document.querySelector("#menubasic");
 const menulike = document.querySelector("#menulike");
 const menudislike = document.querySelector("#menudislike");
@@ -52,9 +51,6 @@ for (const text of mainTexts) {
 
 buttonyes.classList.add("hidden");
 buttonno.classList.add("hidden");
-bg.addEventListener("animationend", () => {
-  main.classList.remove("hidden");
-});
 
 main.addEventListener("animationend", (e) => {
   if (e.animationName !== "spawn") return;

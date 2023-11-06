@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minh</title>
-  </head>
-  <body>
-    <img id="bg" src="/z.png" alt="" />
-    <main class="main-animated hidden">
-      <div id="avatar" class="hidden">
-        <img id="av" class="hidden" src="/av.jpg" alt="" />
-      </div>
-      <div id="info">
-        <div id="menu">
-          <span id="menubasic" class="bg-text hidden underline">info</span>
-          <span id="menulike" class="bg-text hidden">likes</span>
-          <span id="menudislike" class="bg-text hidden">dislikes</span>
-        </div>
-        <div id="basic">
-          <p>Name: Minh</p>
-          <p>Age: 20</p>
-          <p>MBTI: ISTP</p>
-          <p>I'm dry at times, like lame jokes and sarcasm</p>
-          <p>DNI: Below 16, can't take jokes, easily offended</p>
-        </div>
-        <div id="like" class="hidden">
-          <p>Gaming: League Of Legend, Honkai Star Rail, Aether Gazer, Osu</p>
-          <p>
-            Animes: Attack On Titan, Chainsaw man, Jujutsu Kaisen, Fullmetal
-            Alchemist
-          </p>
-          <p>Coding: Javascript/Typescript</p>
-          <p>
-            Music: One Ok Rock, Linkin Park, Imagine Dragons, YOASOBI, coldrain
-          </p>
-        </div>
 
-        <div id="dislike" class="hidden">
-          <p>Toxic people</p>
-          <p>People have brains only for decorative purposes</p>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minh</title>
+</head>
+
+<body>
+  <main class="main-animated">
+    <div id="avatar" class="hidden">
+      <img id="av" class="hidden" src="/av.jpg" alt="" />
+    </div>
+    <div id="info">
+      <div id="menu">
+        <span id="menubasic" class="bg-text hidden underline">info</span>
+        <span id="menulike" class="bg-text hidden">likes</span>
+        <span id="menudislike" class="bg-text hidden">dislikes</span>
       </div>
-      <div id="love">
-        <p>Do you love Minh? 😱</p>
-        <p>Minh lover counter: <span id="counter"></span></p>
-        <div id="buttons">
-          <button id="buttonyes">Yes</button>
-          <button id="buttonno">No</button>
-        </div>
-        <p id="leave">Leave Minh an annonyous message</p>
-        
-    </main>
-    <div id="chat" class="main-animated hidden">
-          <div id="messages" class="hidden"></div>
-          <div id="form" class="hidden">
-            <label for="input">Message: <input type="text" id="input" /></label>
-            <button id="sendbutton">Send</button>
-          </div>
-          <p id="back" class="hidden">Back</p>        
+      <div id="basic">
+        <p>Name: Minh</p>
+        <p>Age: 20</p>
+        <p>MBTI: ISTP</p>
+        <p>I like lame jokes and sarcasm</p>
+        <p>DNI: Below 16, can't take jokes, easily offended</p>
+      </div>
+      <div id="like" class="hidden">
+        <p>Gaming: League Of Legend, Honkai Star Rail, Osu</p>
+        <p>
+          Animes: Attack On Titan, Chainsaw man, Jujutsu Kaisen, Fullmetal Alchemist
+        </p>
+        <p>Coding: Javascript/Typescript, C#, Java/Kotlin </p>
+        <p>
+          Music: One Ok Rock, Linkin Park, Imagine Dragons, YOASOBI, coldrain
+        </p>
       </div>
 
-    <script type="module" src="/main.js"></script>
-  </body>
+      <div id="dislike" class="hidden">
+        <p>Toxic people</p>
+      </div>
+    </div>
+    <div id="love">
+      <p>Do you love Minh? 😱</p>
+      <p>Minh lover counter: <span id="counter"></span></p>
+      <div id="buttons">
+        <button id="buttonyes">Yes</button>
+        <button id="buttonno">No</button>
+      </div>
+      <p id="leave">Leave Minh an annonyous message</p>
+
+  </main>
+  <div id="chat" class="main-animated hidden">
+    <div id="messages" class="hidden"></div>
+    <div id="form" class="hidden">
+      <label for="input">Message: <input type="text" id="input" /></label>
+      <button id="sendbutton">Send</button>
+    </div>
+    <p id="back" class="hidden">Back</p>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
