@@ -1,7 +1,5 @@
 import { db } from "./db";
 import { ref, onValue, update } from "firebase/database";
-const buttonyes = document.querySelector("#buttonyes");
-const buttonno = document.querySelector("#buttonno");
 const mainTexts = document.querySelectorAll("main p");
 const avatar = document.querySelector("#av");
 const main = document.querySelector("main");
@@ -22,11 +20,7 @@ const input = document.querySelector("#input");
 const form = document.querySelector("#form");
 const dbRef = ref(db);
 
-let counterValue = 0;
-onValue(dbRef, (snapshot) => {
-  counterValue = snapshot.val().counter;
-  counter.innerText = counterValue;
-});
+
 
 let chatData = [];
 onValue(dbRef, (snapshot) => {
@@ -49,8 +43,6 @@ for (const text of mainTexts) {
   text.classList.add("hidden");
 }
 
-buttonyes.classList.add("hidden");
-buttonno.classList.add("hidden");
 
 main.addEventListener("animationend", (e) => {
   if (e.animationName !== "spawn") return;
@@ -91,27 +83,6 @@ chat.addEventListener("animationend", (e) => {
   }
 });
 
-buttonno.addEventListener("click", async () => {
-  buttonyes.remove();
-  buttonno.textContent = "Yes";
-  buttonno.classList.add("animated-no");
-  buttonno.classList.add("active");
-  await update(dbRef, { counter: counterValue + 1 });
-});
-
-buttonyes.addEventListener("click", async () => {
-  buttonno.remove();
-  buttonyes.classList.add("animated-yes");
-  buttonyes.classList.add("active");
-  await update(dbRef, { counter: counterValue + 1 });
-});
-
-buttonyes.addEventListener("animationend", (e) => {
-  e.currentTarget.remove();
-});
-buttonno.addEventListener("animationend", (e) => {
-  e.currentTarget.remove();
-});
 
 menubasic.addEventListener("click", (e) => {
   e.currentTarget.classList.add("underline");
